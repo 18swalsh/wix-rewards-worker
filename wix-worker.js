@@ -1,6 +1,6 @@
 $(document).ready(function() {
    
-   console.log("working...")
+   console.log("working hard...")
    setTimeout(function(){
       window.location.reload(1);
    }, 5000);
