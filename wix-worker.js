@@ -10,6 +10,7 @@ $(document).ready(function() {
         Wix.Worker.addEventListener(Wix.Events.PAGE_NAVIGATION, function(page) {
             console.log("Visitor navigated to page" + page.toPage);
         });
+        console.log("Event listener added: PAGE_NAVIGATION");
     }
     catch (e){
         console.log("cannot debug event listener on static site");
