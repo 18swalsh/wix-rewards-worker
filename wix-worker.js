@@ -7,10 +7,5 @@ $(document).ready(function() {
             console.log("Visitor navigated to page" + page.toPage);
         });
 
-
-    });
-
-
-
     console.log("hardly working...")
 });
