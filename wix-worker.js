@@ -16,10 +16,16 @@ $(document).ready(function() {
         //console.log(e);
     }
 
+    try {
     var activity =
         {
             type:Wix.Activities.Type.ECOMMERCE_CART_ADD
         };
+    }
+    catch (e){
+        console.log("could not get ECOMMERCE_CART_ADD");
+        //console.log(e);
+    }
 
     var onSuccess = function(d){console.log("Activity ID: " + d.activityId + ", Contact ID: " + d.contactId)};
     var onFailure = function(d){console.log("Failure message:" + d)};
@@ -28,7 +34,7 @@ $(document).ready(function() {
         Wix.Activities.getActivityById(activity, onSuccess, onFailure);
     }
     catch (e){
-        console.log("cannot debug getActivityById on static site");
+        console.log("cannot debug getActivityById");
         //console.log(e);
     }
 
