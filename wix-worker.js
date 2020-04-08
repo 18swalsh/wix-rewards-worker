@@ -2,6 +2,9 @@ $(document).ready(function() {
     console.log("working hard");
     console.log(Wix)
 
+    let currentMember;
+    let siteMap;
+
     //Wix.onReady(function(){
     try {
         Wix.Worker.addEventListener(Wix.Events.PAGE_NAVIGATION, function(page) {
@@ -30,7 +33,9 @@ $(document).ready(function() {
     }
 
     try {
-        var currentMember = Wix.currentMember;
+        Wix.currentMember(function(memberDetails){
+            currentMember = memberDetails;
+        });
         console.log("currentMember: " + currentMember);
     }
     catch (e){
@@ -39,7 +44,9 @@ $(document).ready(function() {
     }
 
     try {
-        var siteMap = Wix.getSiteMap;
+        Wix.getSiteMap(function(wixSiteMap) {
+            siteMap = wixSiteMap;
+        });
         console.log(siteMap);
     }
     catch (e){
