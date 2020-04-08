@@ -57,7 +57,8 @@ $(document).ready(function() {
     try {
         Wix.Worker.currentMember(function(memberDetails){
             currentMember = memberDetails;
-            console.log("currentMember: " + currentMember.id);
+            currentMemberId = memberDetails.id;
+            console.log("currentMember: " + currentMemberId);
         });
 
     }
