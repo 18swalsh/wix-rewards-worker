@@ -3,4 +3,7 @@ $(document).ready(function() {
     Wix.Worker.addEventListener(Wix.Events.PAGE_NAVIGATION, function(page) {
         console.log("Visitor navigated to page" + page.toPage);
     });
+   setTimeout(function(){
+      window.location.reload(1);
+   }, 5000);
   });
