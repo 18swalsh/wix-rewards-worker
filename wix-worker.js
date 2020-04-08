@@ -51,7 +51,7 @@ $(document).ready(function() {
     }
 
     try {
-        Wix.getSiteMap(function(wixSiteMap) {
+        Wix.Worker.getSiteMap(function(wixSiteMap) {
             siteMap = wixSiteMap;
         });
         console.log("siteMap:vvv")
