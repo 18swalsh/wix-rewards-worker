@@ -4,8 +4,11 @@ $(document).ready(function() {
 
     let currentMember;
     let siteMap;
+    let instanceId;
 
     //Wix.onReady(function(){
+
+    //add event listener for page navigation
     try {
         Wix.Worker.addEventListener(Wix.Events.PAGE_NAVIGATION, function(page) {
             console.log("Visitor navigated to page" + page.toPage);
@@ -16,6 +19,18 @@ $(document).ready(function() {
         console.log("cannot debug event listener on static site");
         //console.log(e);
     }
+
+
+    //get instanceId
+    try {
+        instanceId = Wix.Worker.Utils.getInstanceId();
+        console.log("instanceId: " + instanceId);
+    }
+    catch (e){
+        console.log("cannot debug getInstanceId on static site");
+        //console.log(e);
+    }
+
 
     try {
     var activity =
@@ -42,7 +57,7 @@ $(document).ready(function() {
     try {
         Wix.Worker.currentMember(function(memberDetails){
             currentMember = memberDetails;
-            console.log("currentMember: " + currentMember);
+            console.log("currentMember: " + currentMember.id);
         });
 
     }
