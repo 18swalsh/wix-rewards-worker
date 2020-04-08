@@ -40,7 +40,7 @@ $(document).ready(function() {
     }
 
     try {
-        Wix.currentMember(function(memberDetails){
+        Wix.Worker.currentMember(function(memberDetails){
             currentMember = memberDetails;
         });
         console.log("currentMember: " + currentMember);
