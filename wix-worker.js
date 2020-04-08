@@ -42,8 +42,9 @@ $(document).ready(function() {
     try {
         Wix.Worker.currentMember(function(memberDetails){
             currentMember = memberDetails;
+            console.log("currentMember: " + currentMember);
         });
-        console.log("currentMember: " + currentMember);
+
     }
     catch (e){
         console.log("cannot debug currentMember on static site");
@@ -53,9 +54,10 @@ $(document).ready(function() {
     try {
         Wix.Worker.getSiteMap(function(wixSiteMap) {
             siteMap = wixSiteMap;
+            console.log("siteMap:vvv")
+            console.log(siteMap);
         });
-        console.log("siteMap:vvv")
-        console.log(siteMap);
+
     }
     catch (e){
         console.log("cannot debug getSiteMap on static site");
