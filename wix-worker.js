@@ -54,6 +54,7 @@ $(document).ready(function() {
         Wix.getSiteMap(function(wixSiteMap) {
             siteMap = wixSiteMap;
         });
+        console.log("siteMap:vvv")
         console.log(siteMap);
     }
     catch (e){
